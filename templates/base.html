@@ -1,1 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="author" content="{{ AUTHOR }}">
 
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/notebook.css" type="text/css" />
+  <link rel="shortcut icon" href="{{ SITEURL }}/theme/images/favicon.ico">
+
+  <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+  {% if FEED_RSS %}
+  <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+</head>
+
+<body>
+
+</body>
+</html>
