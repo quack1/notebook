@@ -1,5 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
-	"http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
 	<meta charset="utf-8">
@@ -17,6 +16,64 @@
 </head>
 
 <body>
+  <!-- Sidebar -->
+  <sidebar>
+    <p><a href="{{ SITEURL }}"><img id="avatar" src="{{ SITEURL }}/theme/images/avatar.png"></a></p>
+    <p>{{ SIDEBAR_DIGEST }}</p>
+    <hr>
+    <h1>Social</h1>
+    <ul class="social">
+      {% for name, link in SOCIAL %}
+      <li><a href="{{ link }}">{{ name }}</a></li>
+      {% endfor %}
+      <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate"><i class="icon-bookmark icon-large"></i>Atom feed</a></li>
+      {% if FEED_RSS %}
+      <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
+      {% endif %}
+    </ul>
+    <ul class="navbar">
+      {% for title, link in MENUITEMS %}
+      <li><a href="{{ link }}">{{ title }}</a></li>
+      {% endfor %}
+      {% if DISPLAY_PAGES_ON_MENU %}
+      <h1>Pages</h1>
+      {% for p in PAGES %}
+      <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+      {% else %}
+      {% for cat, null in categories %}
+      <h1>Categories</h1>
+      <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+      {% endfor %}
+      {% endif %}
+    </ul>
+    {% block content %}
+    {% endblock %}
+  </sidebar>
+
+  <!-- Content -->
+  <content>
+
+  </content>
+
+  <!-- Footer -->
+  <footer>
+
+  </footer>
+
+  {% if GOOGLE_ANALYTICS %}
+  <!-- Analytics -->
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS }}']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  {% endif %}
 
 </body>
 </html>
