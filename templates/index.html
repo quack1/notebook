@@ -1,1 +1,15 @@
-
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}
+{% if articles %}
+<ol id="post_list">
+{% for article in (articles_page.object_list if articles_page else articles) %}
+<li><post class="post_entry">
+	<p class="post_category"><a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">[ {{ article.category }} ]</a></p>
+	<p class="post_date">{{ article.locale_date }}</p>
+	<h2 class="post_title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+</post></li>
+{% endfor %}
+</ol>
+{% endif %}
+{% endblock content %}
