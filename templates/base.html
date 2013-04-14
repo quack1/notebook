@@ -26,7 +26,7 @@
       {% for name, link in SOCIAL %}
       <li><a href="{{ link }}">{{ name }}</a></li>
       {% endfor %}
-      <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate"><i class="icon-bookmark icon-large"></i>Atom feed</a></li>
+      <li><a href="{{ SITEURL }}/{{ FEED_ATOM }}" rel="alternate"><i class="icon-bookmark icon-large"></i>Atom feed</a></li>
       {% if FEED_RSS %}
       <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
       {% endif %}
@@ -47,13 +47,12 @@
       {% endfor %}
       {% endif %}
     </ul>
-    {% block content %}
-    {% endblock %}
   </sidebar>
 
   <!-- Content -->
   <content>
-
+    {% block content %}
+    {% endblock %}
   </content>
 
   <!-- Footer -->
