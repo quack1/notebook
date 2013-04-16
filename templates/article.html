@@ -12,6 +12,9 @@
             </a>
         </h1>
         <p class="post_category"><a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">[ {{ article.category }} ]</a></p>
+        {% if article.author %}
+        <p>By <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="icon-user"></i>{{ article.author }}</a></p>
+        {% endif %}
         {% if article.tags %}
         {% for tag in article.tags %}
         <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
@@ -44,7 +47,7 @@
             dsq.type = 'text/javascript'; dsq.async = true;
             dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] ||
-               document.getElementsByTagName('body')[0]).appendChild(dsq);
+             document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
         </script>
     </div>
