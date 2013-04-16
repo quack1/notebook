@@ -35,14 +35,15 @@
       {% for title, link in MENUITEMS %}
       <li><a href="{{ link }}">{{ title }}</a></li>
       {% endfor %}
-      {% if DISPLAY_PAGES_ON_MENU %}
+      {% if DISPLAY_PAGES_ON_MENU and PAGES %}
       <h1>Pages</h1>
       {% for p in PAGES %}
       <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
       {% endfor %}
-      {% else %}
-      {% for cat, null in categories %}
+      {% endif %}
+      {% if categories %}
       <h1>Categories</h1>
+      {% for cat, null in categories %}
       <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
       {% endfor %}
       {% endif %}
