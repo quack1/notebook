@@ -12,4 +12,9 @@
 {% endfor %}
 </ol>
 {% endif %}
+
+{% if articles_page and articles_paginator.num_pages > 1 %}
+{% include 'pagination.html' %}
+{% endif %}
+
 {% endblock content %}
