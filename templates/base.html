@@ -17,7 +17,7 @@
 
 <body>
   <!-- Sidebar -->
-  <sidebar>
+  <aside>
     <p><a href="{{ SITEURL }}"><img id="avatar" src="{{ SITEURL }}/theme/images/avatar.png"></a></p>
     <p>{{ SIDEBAR_DIGEST }}</p>
     <hr>
@@ -31,30 +31,32 @@
       <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
       {% endif %}
     </ul>
+    {% for title, link in MENUITEMS %}
+    <li><a href="{{ link }}">{{ title }}</a></li>
+    {% endfor %}
+    {% if DISPLAY_PAGES_ON_MENU and PAGES %}
+    <h1>Pages</h1>
     <ul class="navbar">
-      {% for title, link in MENUITEMS %}
-      <li><a href="{{ link }}">{{ title }}</a></li>
-      {% endfor %}
-      {% if DISPLAY_PAGES_ON_MENU and PAGES %}
-      <h1>Pages</h1>
       {% for p in PAGES %}
-      <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+      <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
       {% endfor %}
-      {% endif %}
-      {% if categories %}
-      <h1>Categories</h1>
+    </ul>
+    {% endif %}
+    {% if categories %}
+    <h1>Categories</h1>
+    <ul class="navbar">
       {% for cat, null in categories %}
       <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-      {% endfor %}
-      {% endif %}
-    </ul>
-  </sidebar>
+    {% endfor %}
+    </ul> 
+    {% endif %}
+  </aside>
 
   <!-- Content -->
-  <content>
+  <article>
     {% block content %}
     {% endblock %}
-  </content>
+  </article>
 
   <!-- Footer -->
   <footer>
