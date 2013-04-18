@@ -2,15 +2,15 @@
 html { 
   font-family: 'Quattrocento Sans', sans-serif;
   background: white;
+  font-size: 14px;
 }
 h1 { text-transform: uppercase }
 h1, h2 { 
 	font-weight: normal; 
-	font-size: 16px;
 }
 
 body {margin: 0}
-body > article {
+body > article, footer {
   line-height: 1.6em;
   display: block;
   max-width: 600px;
@@ -20,20 +20,46 @@ body > article {
 
 p.post_entry {  
 }
-
-a { color:#1DAEDF; text-decoration:none; }
-a:hover { text-decoration: underline; }
-li.post_list {
+article > header {
   list-style-type: none;
   padding: 0px 10px;
-  background: #F2F2F2;
+  background: #E0E0E0;
+  box-shadow: 0 0 0 2px #E0E0E0;
   -moz-border-radius: 5px 0;
   -webkit-border-radius: 5px 0;
   border-radius: 5px 5px;
 }
+.article_left > h1 {
+  font-size: 20px;
+}
+.article_left > a {
+    text-decoration: none;
+}
+.article_left > a.hover {
+    text-decoration: underline;
+}
+.article_right {
+  background-color: white;
+}
+
+a { color:#1DAEDF; text-decoration:none; }
+a:hover { text-decoration: underline; }
+.post_list {
+  list-style-type: none;
+  padding: 0px 10px;
+  /*background: #E0E0E0;*/
+  box-shadow: 0 0 0 2px #1DAEDF;
+  -moz-border-radius: 5px 0;
+  -webkit-border-radius: 5px 0;
+  border-radius: 5px 5px;
+}
+li.post_list:hover {
+  box-shadow: 0 0 0 2px #52ACAE;
+}
 
 /* Sidebar */
 aside {
+  font-size: 14px;
   width: 220px; height: 100%;
   position: fixed;
   top: 0; left: 0;
