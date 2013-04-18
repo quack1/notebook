@@ -4,23 +4,7 @@
 <section id="content">
     <article>
         <header>
-            <h1>
-                <a href="{{ pagename }}"
-                rel="bookmark"
-                title="Permalink to {{ article.title }}">
-                {{ article.title}}
-            </a>
-        </h1>
-        <p class="post_category"><a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">[ {{ article.category }} ]</a></p>
-        {% if article.author %}
-        <p>By <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="icon-user"></i>{{ article.author }}</a></p>
-        {% endif %}
-        {% if article.tags %}
-        {% for tag in article.tags %}
-        <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
-        {% endfor %}
-        {% endif %}
-        <headerright>
+        <span class="article_right">
             <p class="article_post_date">{{ article.locale_date }}</p>
             <div class="entry-social">
                 <span class="twitter"><a href="https://twitter.com/home/?status={{ article.title }}%20%7C%20{{ SITEURL }}/{{article.url}}%20by%20@{{TWITTER_USERNAME}}" target="_blank">Twitter</a></span>
@@ -31,7 +15,25 @@
 
                 <span class="mail"><a href="mailto:?subject={{ article.title }}&amp;body=Viens découvrir un article à propos de [{{ article.title }}] sur le site de {{ AUTHOR }}. {{ SITEURL }}/{{article.url}}" title="Share by Email" target="_blank">Mail</a></span>
             </div>
-        </headerright>
+        </span>
+            <span class="article_left">
+                <h1>
+                    <a href="{{ pagename }}"
+                    rel="bookmark"
+                    title="Permalink to {{ article.title }}">
+                    {{ article.title}}
+                </a>
+            </h1>
+            <p class="post_category"><a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">[ {{ article.category }} ]</a></p>
+            {% if article.author %}
+            <p>By <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="icon-user"></i>{{ article.author }}</a></p>
+            {% endif %}
+            {% if article.tags %}
+            {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
+            {% endfor %}
+            {% endif %}
+        </span>
     </header>
     <div class="entry-content">
         {{ article.content }}
@@ -47,7 +49,7 @@
             dsq.type = 'text/javascript'; dsq.async = true;
             dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] ||
-             document.getElementsByTagName('body')[0]).appendChild(dsq);
+               document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
         </script>
     </div>
