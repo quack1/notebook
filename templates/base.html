@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-{% block head %}
-	<meta charset="utf-8">
-	<title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-	<meta name="description" content="">
-	<meta name="author" content="{{ AUTHOR }}">
+  {% block head %}
+  <meta charset="utf-8">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="author" content="{{ AUTHOR }}">
 
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/notebook.css" type="text/css" />
   <link rel="shortcut icon" href="{{ SITEURL }}/{{ AVATAR}}">
@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{ SITENAME }}">
   <meta name="twitter:image" content="{{ SITEURL }}/{{ AVATAR }}">
-{% endblock %}
+  {% endblock %}
 </head>
 
 <body>
@@ -68,6 +68,13 @@
   <!-- Footer -->
   <footer>
     <address id="about" class="vcard body">
+      {% if FIREFOX_BANNERS %}
+      <div align="center">
+      {% for id, img, alt in FIREFOX_BANNERS %}
+      <a href="http://affiliates.mozilla.org/link/banner/{{ id }}" target="_blank"><img src="{{ img }}" alt="{{ alt }}"/></a>
+      {% endfor %}
+      </div>
+      {% endif %}
       Blog powered by <a href="http://getpelican.com/">Pelican</a>, 
       which takes great advantage of <a href="http://python.org">Python</a>.
       Theme <a href="https://github.com/quack1/notebook/">Notebook</a> by <a href="https://twitter.com/_Quack1">@Quack1</a>.

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block head %}
-    {{ super() }}
-  <meta name="twitter:creator" content="{{ article.author }}">
-  <meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
-  <meta name="twitter:title" content="{{ article.title }}">
-  <meta name="twitter:description" content="{{ article.summary }}">
+{{ super() }}
+<meta name="twitter:creator" content="{{ article.author }}">
+<meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta name="twitter:title" content="{{ article.title }}">
+<meta name="twitter:description" content="{{ article.summary }}">
 {% endblock head %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
@@ -50,7 +50,7 @@
                 dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] ||
-                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                   document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
             </script>
         </div>
