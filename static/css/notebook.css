@@ -37,12 +37,6 @@ article > header {
 .article_left > h1 {
   font-size: 20px;
 }
-.article_left > a {
-    text-decoration: none;
-}
-.article_left > a.hover {
-    text-decoration: underline;
-}
 .article_right {
   background-color: white;
 }
@@ -60,7 +54,10 @@ li.post_list:hover {
 }
 
 /* Links */;
-a { color:#1DAEDF; text-decoration:none; }
+a  { color:#1DAEDF; text-decoration:none; }
+a:visited { color:#1DAEDF; text-decoration:none; }
+a:link { color:#1DAEDF; text-decoration:none; }
+a:active { color:#1DAEDF; text-decoration:none; }
 a:hover { text-decoration: underline; }
 
 /* Code */
