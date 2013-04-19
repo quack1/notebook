@@ -31,11 +31,11 @@
     <h2>Social</h2>
     <ul class="social">
       {% for name, link in SOCIAL %}
-      <li><a href="{{ link }}">{{ name }}</a></li>
+      <li style="list-style-image : url({{ SITEURL }}/theme/images/icons/{{ name|lower }}.png);"><a href="{{ link }}">{{ name }}</a></li>
       {% endfor %}
-      <li><a href="{{ SITEURL }}/{{ FEED_ATOM }}" rel="alternate"><i class="icon-bookmark icon-large"></i>Atom feed</a></li>
+      <li style="list-style-image : url({{ SITEURL }}/theme/images/icons/rss.png);"><a href="{{ SITEURL }}/{{ FEED_ATOM }}" rel="alternate"><i class="icon-bookmark icon-large"></i>Atom feed</a></li>
       {% if FEED_RSS %}
-      <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
+      <li style="list-style-image : url({{ SITEURL }}/theme/images/icons/rss.png);"><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
       {% endif %}
     </ul>
     {% for title, link in MENUITEMS %}
