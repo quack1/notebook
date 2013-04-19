@@ -10,6 +10,8 @@ html {
 h1 { text-transform: uppercase }
 h1, h2 { 
 	font-weight: normal; 
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Body */
@@ -143,7 +145,6 @@ aside {
   background-image: url(http://i.imgur.com/5nwPL.png);
   color: white;
   box-shadow: 0 0 3px black;
-  overflow-y: scroll;
 }
 aside > hr {
   margin: 0; clear: both;
@@ -152,13 +153,19 @@ aside > hr {
 aside > ul {
   list-style-type: none;
   padding: 0px 10px;
+  margin-top: 0px;
+}
+aside > h2 { 
+  text-transform: uppercase;
+  font-size: 14px; 
+  margin-bottom: 5px;
 }
 
 #avatar {
   width: 100px;
   border-radius: 50%;
   display: block;
-  margin: 0 10px 40px 0;
+  margin: 0 10px 10px 0;
   box-shadow: 0px 0px 5px 3px #1DAEDF;
   -webkit-transition: 200ms;
      -moz-transition: 200ms;

@@ -22,7 +22,7 @@
     <h1>{{ SITENAME }}</h1>
     <p>{{ SIDEBAR_DIGEST }}</p>
     <hr>
-    <h1>Social</h1>
+    <h2>Social</h2>
     <ul class="social">
       {% for name, link in SOCIAL %}
       <li><a href="{{ link }}">{{ name }}</a></li>
@@ -36,7 +36,7 @@
     <li><a href="{{ link }}">{{ title }}</a></li>
     {% endfor %}
     {% if DISPLAY_PAGES_ON_MENU and PAGES %}
-    <h1>Pages</h1>
+    <h2>Pages</h2>
     <ul class="navbar">
       {% for p in PAGES %}
       <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
@@ -44,11 +44,11 @@
     </ul>
     {% endif %}
     {% if categories %}
-    <h1>Categories</h1>
+    <h2>Categories</h2>
     <ul class="navbar">
       {% for cat, null in categories %}
       <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-    {% endfor %}
+      {% endfor %}
     </ul> 
     {% endif %}
   </aside>
