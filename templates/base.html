@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
+{% block head %}
 	<meta charset="utf-8">
 	<title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 	<meta name="description" content="">
@@ -13,6 +14,11 @@
   {% if FEED_RSS %}
   <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
   {% endif %}
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ SITENAME }}">
+  <meta name="twitter:image" content="{{ SITEURL }}/{{ AVATAR }}">
+{% endblock %}
 </head>
 
 <body>
