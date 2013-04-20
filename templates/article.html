@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block head %}
 {{ super() }}
-<meta name="twitter:creator" content="{{ article.author }}">
+<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
 <meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
-<meta name="twitter:title" content="{{ article.title }}">
+<meta name="twitter:title" content="{{ SITENAME }} ~ {{ article.title }}">
 <meta name="twitter:description" content="{{ article.summary }}">
 {% endblock head %}
 {% block title %}{{ article.title }}{% endblock %}
