@@ -2,12 +2,8 @@
 {% block content %}
 <h2>Tags</h2>
 <ul>
-{% for tag in tag_cloud %}
-<li class="tag">
-	<a href="{{ SITEURL }}/{{ tag.0.url }}">
-		{{ tag.0 }}
-	</a>
-</li>
+{% for tag, articles in tags %}
+    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</li>
 {% endfor %}
 </ul>
 {% endblock %}
