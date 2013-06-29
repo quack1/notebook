@@ -61,6 +61,14 @@
       {% endfor %}
     </ul> 
     {% endif %}
+    {% if BLOGROLL %}
+      <h2>Blogroll</h2>
+      <ul class="navbar">
+      {% for title, link in BLOGROLL %}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+      {% endfor %}
+      </ul> 
+    {% endif %}
   </aside>
 
   <!-- Content -->

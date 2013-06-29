@@ -70,6 +70,7 @@ code, pre, codehilite {
   font-size: 12px;
   font-family: 'Oxygen Mono', sans-serif;
   color: #2E2E2E;
+  word-wrap: break-word;
 }
 .codehilite  {
   /* background: #272822; */
@@ -141,8 +142,8 @@ code, pre, codehilite {
 /* Sidebar */
 aside {
   font-size: 14px;
-  width: 220px; height: 100%;
-  position: fixed;
+  width: 220px; 
+  position: absolute;
   top: 0; left: 0;
   padding: 30px;
   background-image: url(http://i.imgur.com/5nwPL.png);
