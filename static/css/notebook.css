@@ -7,9 +7,12 @@ html {
 }
 
 /* Titles */
-h1 { text-transform: uppercase }
+h1 { 
+  text-transform: uppercase;
+  font-size: 16px;
+}
 h1, h2 { 
-	font-weight: normal; 
+  font-weight: normal; 
   margin-top: 10px;
   margin-bottom: 10px;
 }
