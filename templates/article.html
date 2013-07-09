@@ -3,12 +3,12 @@
 {{ super() }}
 <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
 <meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
-<meta name="twitter:title" content="{{ SITENAME }} ~ {{ article.title }}">
-<meta name="twitter:description" content="{{ article.summary }}">
+<meta name="twitter:title" content="{{ SITENAME }} ~ {{ article.title|striptags }}">
+<meta name="twitter:description" content="{{ article.summary|striptags }}">
 
 <!-- Facebook Meta Data -->
-<meta property="og:title" content="{{ SITENAME }} ~ {{ article.title }}" />
-<meta property="og:description" content="{{ article.summary }}" />
+<meta property="og:title" content="{{ SITENAME }} ~ {{ article.title|striptags }}" />
+<meta property="og:description" content="{{ article.summary|striptags }}" />
 <meta property="og:image" content="{{ AVATAR }}" />
 {% endblock head %}
 {% block title %}{{ article.title }}{% endblock %}
@@ -27,14 +27,14 @@
             <div><span>Tags : </span>
                 {% if article.tags %}
                 {% for tag in article.tags %}
-                <span><a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}, </a></span>
+                <span><a href="{{ SITEURL }}/{{ tag.url }}">&#35;{{ tag }}, </a></span>
                 {% endfor %}
                 {% endif %}
             </div>
 
             <div class="entry-social">
                 <span>Partagez cet article! </span>
-                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}&via={{TWITTER_USERNAME}}">Twitter</a></span>
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}%20&#35;blog&via={{TWITTER_USERNAME}}">Twitter</a></span>
                 <span> ~ </span>
                 <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url={{ SITEURL }}/{{article.url}}&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">Google+</a></span>
                 <span> ~ </span>
