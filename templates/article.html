@@ -33,14 +33,15 @@
             </div>
 
             <div class="entry-social">
+                <span>Partagez cet article! </span>
                 <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}&via={{TWITTER_USERNAME}}">Twitter</a></span>
-
+                <span> ~ </span>
                 <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url={{ SITEURL }}/{{article.url}}&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">Google+</a></span>
-
+                <span> ~ </span>
                 <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u={{ SITEURL }}/{{article.url}}&t={{ article.title }}">Facebook</a></span>
-
+                <span> ~ </span>
                 <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=<{{ SITEURL }}/{{ article.url }}&title={{ article.title }}" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">Linkedin</a>
-
+                <span> ~ </span>
                 <span class="mail"><a href="mailto:?subject={{ article.title }}&amp;body=Viens découvrir un article à propos de [{{ article.title }}] sur le site de {{ AUTHOR }}. {{ SITEURL }}/{{article.url}}" title="Share by Email" target="_blank">Mail</a></span>
             </div>
         </header>
