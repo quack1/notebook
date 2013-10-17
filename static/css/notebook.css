@@ -1,5 +1,5 @@
 /*@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans&subset=latin,latin-ext); */
-@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Share+Tech+Mono|Oxygen+Mono);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Share+Tech+Mono|Oxygen+Mono);
 html { 
   font-family: 'Quattrocento Sans', sans-serif;
   background: white;
@@ -9,7 +9,13 @@ html {
 /* Titles */
 h1 { 
   text-transform: uppercase;
+  font-size: 18px;
+}
+h2 {
   font-size: 16px;
+}
+h3 {
+  font-size: 14px;
 }
 h1, h2 { 
   font-weight: normal; 
@@ -146,7 +152,7 @@ aside {
   position: absolute;
   top: 0; left: 0;
   padding: 30px;
-  background-image: url(http://i.imgur.com/5nwPL.png);
+  background-image: url(https://i.imgur.com/5nwPL.png);
   color: white;
   box-shadow: 0 0 3px black;
 }
