@@ -41,6 +41,7 @@
       {% if FEED_RSS %}
       <li style="list-style-image : url({{ SITEURL }}/theme/images/icons/rss.png);"><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
       {% endif %}
+      <li><a href="https://flattr.com/submit/auto?user_id=quack1&url={{ SITEURL }}&title={{ SITENAME }}" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></li>
     </ul>
     {% for title, link in MENUITEMS %}
     <li><a href="{{ link }}">{{ title }}</a></li>

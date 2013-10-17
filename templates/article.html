@@ -44,6 +44,10 @@
                 <span> ~ </span>
                 <span class="mail"><a href="mailto:?subject={{ article.title }}&amp;body=Viens découvrir un article à propos de [{{ article.title }}] sur le site de {{ AUTHOR }}. {{ SITEURL }}/{{article.url}}" title="Share by Email" target="_blank">Mail</a></span>
             </div>
+
+            <div>
+                <a href="https://flattr.com/submit/auto?user_id=quack1&url={{ SITEURL }}/{{article.url}}&title={{ article.title }}" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+            </div>
         </header>
         <div class="entry-content">
             {{ article.content }}
@@ -57,7 +61,7 @@
             (function() {
                 var dsq = document.createElement('script');
                 dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+                dsq.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] ||
                  document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
