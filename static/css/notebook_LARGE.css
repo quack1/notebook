@@ -1,7 +1,6 @@
-/*@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans&subset=latin,latin-ext); */
-@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Share+Tech+Mono|Oxygen+Mono);
 html { 
-  font-family: 'Quattrocento Sans', sans-serif;
+/*  font-family: 'Quattrocento Sans', sans-serif; */
+  font-family: "Ubuntu", "Trebuchet", "Tahoma", "sans-serif";
   background: white;
   font-size: 14px;
 }
@@ -10,25 +9,27 @@ html {
 h1 { 
   text-transform: uppercase;
   font-size: 18px;
+  font-weight: 900;
+  margin-top: 60px;
+  margin-bottom: 10px;
 }
 h2 {
   font-size: 16px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 h3 {
   font-size: 14px;
-}
-h1, h2 { 
-  font-weight: normal; 
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 /* Body */
 body {margin: 0}
 body > article, footer {
-  line-height: 1.6em;
+  line-height: 2em;
   display: block;
-  max-width: 600px;
+  max-width: 700px;
   margin: 40px auto auto 285px;
   padding: 20px 10px 0;
 }
@@ -74,7 +75,7 @@ a:hover { text-decoration: underline; }
 /* Code */
 code, pre, codehilite {
   font-size: 12px;
-  font-family: 'Oxygen Mono', sans-serif;
+  font-family: 'Ubuntu Mono', 'Oxygen Mono', sans-serif;
   color: #2E2E2E;
   word-wrap: break-word;
   border: 1px solid #ddd;
@@ -154,7 +155,7 @@ aside {
   position: absolute;
   top: 0; left: 0;
   padding: 30px;
-  background-image: url(https://i.imgur.com/5nwPL.png);
+  background-image: url("/theme/images/background.png");
   color: white;
   box-shadow: 0 0 3px black;
 }
