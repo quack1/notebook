@@ -78,8 +78,8 @@ code, pre, codehilite {
   font-family: 'Ubuntu Mono', 'Oxygen Mono', sans-serif;
   color: #2E2E2E;
   word-wrap: break-word;
-  border: 1px solid #ddd;
-  box-shadow: 0px 0px 2px 2px #ddd;
+  border: 1px solid #73D12E;
+  box-shadow: 0px 0px 1px 1px #73D12E;
 }
 .codehilite  {
   /* background: #272822; */
