@@ -32,6 +32,9 @@ body > article, footer {
   max-width: 700px;
   margin: 40px auto auto 285px;
   padding: 20px 10px 0;
+  text-align:justify;
+  text-justify:newspaper;
+  text-rendering: optimizelegibility;
 }
 
 /* Articles */
@@ -71,6 +74,21 @@ a:visited { color:#1DAEDF; text-decoration:none; }
 a:link { color:#1DAEDF; text-decoration:none; }
 a:active { color:#1DAEDF; text-decoration:none; }
 a:hover { text-decoration: underline; }
+
+/* Images */
+article .entry-content img{
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Quotes */
+article .entry-content blockquote{
+  border-radius: 5px; 
+  box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.35);
+  font-style: italic;
+  font-family: serif;
+  font-size: 12px;
+}
 
 /* Code */
 code, pre, codehilite {
